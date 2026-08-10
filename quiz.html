@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responder Quiz - QuizIF</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="quiz-body">
+<main class="quiz-page">
+    <header class="quiz-header"><button class="botao neutro" onclick="location.href='index.html'">← Sair</button><div><span id="materiaQuiz" class="badge"></span><h1 id="tituloSala"></h1></div><span id="contadorQuiz" class="quiz-counter"></span></header>
+    <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+    <section class="quiz-card">
+        <div class="question-meta"><span id="numeroPergunta"></span><span id="timer" class="timer"></span></div>
+        <h2 id="pergunta"></h2>
+        <div id="alternativas" class="quiz-alternativas"></div>
+    </section>
+</main>
+<script src="quiz.js"></script>
+</body>
+</html>

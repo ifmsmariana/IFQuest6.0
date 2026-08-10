@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 class="titulo">CADASTRAR-SE</h1>
+
+<div class="caixa">
+
+    <input type="text" id="novoUser" placeholder="NOME DE USUÁRIO">
+
+    <input type="password" id="senha" placeholder="SENHA">
+
+    <input type="email" id="email" placeholder="EMAIL">
+
+    <select id="campus">
+        <option value="">Selecione o Campus</option>
+        <option>Campo Grande</option>
+        <option>Aquidauana</option>
+        <option>Corumbá</option>
+        <option>Dourados</option>
+        <option>Três Lagoas</option>
+        <option>Coxim</option>
+        <option>Naviraí</option>
+        <option>Ponta Porã</option>
+        <option>Chapadão do Sul</option>
+        <option>Nova Andradina</option>
+        <option>Paranaíba</option>
+        <option>Jardim</option>
+        <option>Bonito</option>
+    </select>
+
+    <select id="curso">
+        <option value="">Selecione o Curso</option>
+        <option>Agricultura</option>
+        <option>Agropecuária</option>
+        <option>Alimentos</option>
+        <option>Edificações</option>
+        <option>Eletrotécnica</option>
+        <option>Informática</option>
+        <option>Informática para Internet</option>
+        <option>Jogos Digitais</option>
+        <option>Mecânica</option>
+        <option>Metalurgia</option>
+    </select>
+
+    <button class="botao" onclick="cadastrar()">
+        CADASTRAR
+    </button>
+
+    <button class="link" onclick="voltar()">
+        VOLTAR
+    </button>
+
+</div>
+
+<script src="cadastro.js"></script>
+
+</body>
+</html>

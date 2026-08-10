@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Sala - QuizIF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+    <h1 class="logo">QuizIF</h1>
+    <nav class="menu">
+        <button onclick="location.href='index.html'">🏠 Home</button>
+        <button onclick="location.href='perfil.html'">👤 Perfil</button>
+    </nav>
+</header>
+
+<main class="form-page">
+    <div class="page-heading">
+        <span class="eyebrow">Professor</span>
+        <h2>Criar nova sala</h2>
+        <p>Configure a matéria, dificuldade e as perguntas do seu quiz.</p>
+    </div>
+
+    <section class="card form-card">
+        <h3>Informações da sala</h3>
+        <label for="nomeSala">Nome da sala <span class="obrigatorio">*</span></label>
+        <input type="text" id="nomeSala" maxlength="100" placeholder="Ex.: Matemática ENEM" required>
+
+        <div class="form-grid">
+            <div>
+                <label for="categoria">Matéria</label>
+                <select id="categoria">
+                    <option>Matemática</option>
+                    <option>Português</option>
+                    <option>História</option>
+                    <option>Geografia</option>
+                    <option>Química</option>
+                    <option>Física</option>
+                    <option>Biologia</option>
+                    <option>Informática</option>
+                    <option>Conhecimentos Gerais</option>
+                </select>
+            </div>
+            <div>
+                <label for="dificuldade">Nível de dificuldade</label>
+                <select id="dificuldade">
+                    <option>Fácil</option>
+                    <option>Médio</option>
+                    <option>Difícil</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="card form-card">
+        <div class="section-title-row">
+            <div>
+                <h3>Adicionar pergunta</h3>
+                <p>Escolha também o tempo limite. Use 0 para deixar sem limite.</p>
+            </div>
+        </div>
+
+        <label for="pergunta">Pergunta</label>
+        <textarea id="pergunta" rows="3" placeholder="Digite a pergunta..."></textarea>
+
+        <div class="tempo-row">
+            <div>
+                <label for="tempo">Tempo para responder</label>
+                <input id="tempo" type="number" min="0" max="3600" step="5" value="0">
+            </div>
+            <span class="help-text">segundos — 0 = sem limite</span>
+        </div>
+
+        <div class="alternativas-grid">
+            <div class="alternativa-editor"><span>A</span><input id="alt1" type="text" placeholder="Alternativa A"><label><input type="radio" name="correta" value="0"> correta</label></div>
+            <div class="alternativa-editor"><span>B</span><input id="alt2" type="text" placeholder="Alternativa B"><label><input type="radio" name="correta" value="1"> correta</label></div>
+            <div class="alternativa-editor"><span>C</span><input id="alt3" type="text" placeholder="Alternativa C"><label><input type="radio" name="correta" value="2"> correta</label></div>
+            <div class="alternativa-editor"><span>D</span><input id="alt4" type="text" placeholder="Alternativa D"><label><input type="radio" name="correta" value="3"> correta</label></div>
+        </div>
+
+        <button id="adicionarPergunta" class="botao secundario">➕ Adicionar pergunta</button>
+    </section>
+
+    <section class="card form-card">
+        <div class="section-title-row">
+            <h3>Perguntas adicionadas</h3>
+            <span id="contadorPerguntas" class="badge">0</span>
+        </div>
+        <div id="listaPerguntas" class="lista-perguntas"></div>
+    </section>
+
+    <div class="actions-end">
+        <button onclick="location.href='index.html'" class="botao neutro">Cancelar</button>
+        <button id="salvarSala" class="botao">💾 Criar sala</button>
+    </div>
+</main>
+<script src="criar.js"></script>
+</body>
+</html>

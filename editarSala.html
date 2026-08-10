@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Sala - QuizIF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+    <h1 class="logo">Editar sala</h1>
+    <button onclick="location.href='minhasSalas.html'">← Minhas salas</button>
+</header>
+<main class="form-page">
+    <div class="page-heading"><span class="eyebrow">Professor</span><h2 id="tituloPagina">Editar sala</h2><p>Atualize as informações e perguntas desta sala.</p></div>
+    <section class="card form-card">
+        <h3>Informações da sala</h3>
+        <label for="nomeSala">Nome da sala <span class="obrigatorio">*</span></label>
+        <input id="nomeSala" type="text" maxlength="100" required>
+        <div class="form-grid">
+            <div><label for="categoria">Matéria</label><select id="categoria"><option>Matemática</option><option>Português</option><option>História</option><option>Geografia</option><option>Química</option><option>Física</option><option>Biologia</option><option>Informática</option><option>Conhecimentos Gerais</option></select></div>
+            <div><label for="dificuldade">Nível de dificuldade</label><select id="dificuldade"><option>Fácil</option><option>Médio</option><option>Difícil</option></select></div>
+        </div>
+    </section>
+    <section class="card form-card">
+        <h3 id="modoPergunta">Adicionar pergunta</h3>
+        <textarea id="pergunta" rows="3" placeholder="Digite a pergunta..."></textarea>
+        <div class="tempo-row"><div><label for="tempo">Tempo para responder</label><input id="tempo" type="number" min="0" max="3600" step="5" value="0"></div><span class="help-text">segundos — 0 = sem limite</span></div>
+        <div class="alternativas-grid">
+            <div class="alternativa-editor"><span>A</span><input id="alt1" placeholder="Alternativa A"><label><input type="radio" name="correta" value="0"> correta</label></div>
+            <div class="alternativa-editor"><span>B</span><input id="alt2" placeholder="Alternativa B"><label><input type="radio" name="correta" value="1"> correta</label></div>
+            <div class="alternativa-editor"><span>C</span><input id="alt3" placeholder="Alternativa C"><label><input type="radio" name="correta" value="2"> correta</label></div>
+            <div class="alternativa-editor"><span>D</span><input id="alt4" placeholder="Alternativa D"><label><input type="radio" name="correta" value="3"> correta</label></div>
+        </div>
+        <button id="adicionarPergunta" class="botao secundario">➕ Adicionar pergunta</button>
+    </section>
+    <section class="card form-card"><div class="section-title-row"><h3>Perguntas</h3><span id="contadorPerguntas" class="badge">0</span></div><div id="listaPerguntas" class="lista-perguntas"></div></section>
+    <div class="actions-end"><button onclick="location.href='minhasSalas.html'" class="botao neutro">Cancelar</button><button id="salvarSala" class="botao">💾 Salvar alterações</button></div>
+</main>
+<script src="editarSala.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Perfil - QuizIF</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="topo"><h1 class="logo">Meu Perfil</h1><button onclick="location.href='index.html'">🏠 Home</button></header>
+<main class="profile-page">
+    <section class="card profile-card">
+        <div class="profile-avatar">👤</div><div><span class="eyebrow">Minha conta</span><h2 id="nome"></h2><p id="email"></p></div>
+        <div class="profile-info"><p id="campus"></p><p id="curso"></p></div>
+    </section>
+    <section class="stats-grid">
+        <div class="stat-card"><span>⭐</span><strong id="pontos">0</strong><small>Pontos</small></div>
+        <div class="stat-card"><span>🎯</span><strong id="acertos">0</strong><small>Acertos</small></div>
+        <div class="stat-card"><span>📚</span><strong id="perguntas">0</strong><small>Perguntas</small></div>
+        <div class="stat-card"><span>📝</span><strong id="quizzes">0</strong><small>Quizzes</small></div>
+    </section>
+    <section class="card action-card">
+        <button class="botao" onclick="location.href='estatisticas.html'">📊 Ver minhas estatísticas</button>
+        <button class="botao secundario" onclick="editarPerfil()">✏ Editar perfil</button>
+        <button class="botao secundario" onclick="alterarSenha()">🔒 Alterar senha</button>
+        <button class="botao neutro" onclick="location.href='minhasSalas.html'">📚 Minhas salas</button>
+        <button class="botao perigo" onclick="sair()">🚪 Sair</button>
+    </section>
+</main>
+<script src="perfil.js"></script>
+</body>
+</html>
